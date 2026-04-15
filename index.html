@@ -27,7 +27,7 @@ body {
   color: var(--text);
   font-family: 'Noto Sans KR', sans-serif;
   min-height: 100vh;
-  overflow: hidden;
+  overflow-y: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -588,6 +588,7 @@ body {
   border-color: var(--accent);
   outline: none;
 }
+.back-btn { min-height: 44px; }
 /* ===== BRIEFING SCREEN ===== */
 #briefing-screen {
   position: relative;
@@ -919,7 +920,7 @@ body {
   <!-- VOCAB REVIEW -->
   <div id="vocab-panel" class="panel hidden">
     <div class="vocab-title">&#128203; KEY VOCABULARY</div>
-    <ul class="vocab-list" id="vocab-list" role="listbox" aria-label="핵심 단어 목록"></ul>
+    <ul class="vocab-list" id="vocab-list" role="listbox" aria-label="핵심 단어 목록" tabindex="-1"></ul>
     <div class="vocab-controls">
       단어를 탭하면 발음을 들을 수 있어요 &nbsp; <kbd>↑↓</kbd> 이동 &nbsp; <kbd>R</kbd> 발음
     </div>
@@ -1019,11 +1020,13 @@ let state = {
   bonusOrder: [],
   filledBlanks: [],
   retrying: false,
+  bonusRetrying: false,
   briefingStep: 0
 };
 
 /* ===== BRIEFING ===== */
 let typewriterTimer = null;
+let briefingTimeout = null;
 const BRIEFING_STEPS = [
   {
     icon: '\uD83D\uDD0D',
@@ -1053,7 +1056,7 @@ function showBriefing() {
   state.briefingStep = 0;
   showScreen('briefing-screen');
   playSfx('radio_static');
-  setTimeout(() => renderBriefingStep(), 400);
+  briefingTimeout = setTimeout(() => renderBriefingStep(), 400);
 }
 
 function renderBriefingStep() {
@@ -1185,6 +1188,7 @@ function advanceBriefing() {
 }
 
 function goBackFromBriefing() {
+  if (briefingTimeout) { clearTimeout(briefingTimeout); briefingTimeout = null; }
   if (typewriterTimer) { clearInterval(typewriterTimer); typewriterTimer = null; }
   if (currentAudio) { currentAudio.pause(); currentAudio = null; }
   showScreen('start-screen');
@@ -1384,7 +1388,7 @@ function buildCaseCards() {
       '<div class="case-key">' + (i+1) + '</div>';
     card.addEventListener('click', () => { if (!state.solvedPassages.includes(i)) startPassage(i); });
     card.addEventListener('keydown', e => {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); startPassage(i); }
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); if (!state.solvedPassages.includes(i)) startPassage(i); }
     });
     grid.appendChild(card);
   });
@@ -1395,6 +1399,8 @@ function updateCaseCards() {
   for (let i = 0; i < cards.length; i++) {
     if (state.solvedPassages.includes(i)) {
       cards[i].classList.add('solved');
+    } else {
+      cards[i].classList.remove('solved');
     }
   }
 }
@@ -1997,10 +2003,12 @@ function spawnConfetti() {
 /* ===== KEYBOARD HANDLER ===== */
 document.addEventListener('keydown', e => {
   const key = e.key;
+  // Don't intercept Enter/Space if a button or interactive control is focused
+  const isOnControl = e.target.closest('button, [role="button"], a, input, select, textarea');
 
   switch (state.screen) {
     case 'start':
-      if (key === ' ' || key === 'Enter') { e.preventDefault(); showBriefing(); }
+      if (key === ' ' || key === 'Enter') { if (!isOnControl) { e.preventDefault(); showBriefing(); } }
       if (key === 'Escape') { e.preventDefault(); showLessonSelect(); }
       break;
 
@@ -2019,13 +2027,13 @@ document.addEventListener('keydown', e => {
       break;
 
     case 'reading':
-      if (key === ' ') {
+      if (key === ' ' && !isOnControl) {
         e.preventDefault();
         const p = D.passages[state.passageIdx];
         playAudio(p.audioKey);
       }
       if (key === 't' || key === 'T') { e.preventDefault(); toggleTranslation(); }
-      if (key === 'Enter') { e.preventDefault(); startInvestigation(); }
+      if (key === 'Enter' && !isOnControl) { e.preventDefault(); startInvestigation(); }
       if (key === 'r' || key === 'R') {
         e.preventDefault();
         playAudio(D.passages[state.passageIdx].audioKey);
