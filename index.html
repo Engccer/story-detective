@@ -838,7 +838,7 @@ body {
   <div class="magnifying" aria-hidden="true">&#128269;</div>
   <div class="title" style="font-family:'Special Elite',cursive; font-size:3rem; color:var(--accent); text-shadow:0 0 30px var(--accent-glow); margin-bottom:0.3rem;">STORY DETECTIVE</div>
   <p class="select-subtitle">중학교 1학년 영어 읽기 이해 퀴즈</p>
-  <div class="lesson-grid" id="lesson-grid" role="list" aria-label="레슨 목록"></div>
+  <div class="lesson-grid" id="lesson-grid" aria-label="레슨 목록"></div>
   <div class="total-stats" id="total-stats"></div>
   <p class="select-hint">레슨을 선택하여 수사를 시작하세요</p>
 </div>
@@ -954,6 +954,7 @@ body {
   </div>
   <div class="end-controls">
     <button class="action-btn" id="btn-restart" tabindex="0">PLAY AGAIN <span class="key-hint">(Space)</span></button>
+    <button class="action-btn" id="btn-next-lesson" tabindex="0" style="display:none;">NEXT LESSON →</button>
   </div>
 </div>
 
@@ -1284,12 +1285,14 @@ function renderLessonGrid() {
   STORY_LESSONS.forEach(function(lesson) {
     var card = document.createElement('button');
     card.className = 'lesson-card';
-    card.setAttribute('role', 'listitem');
     card.dataset.lesson = lesson.id;
 
     var data = scores['L' + lesson.id];
     var bestText = data ? data.bestScore + 'pts (' + data.bestPct + '%)' : '--';
-    var badge = (data && data.bestPct >= 70) ? '\u2B50' : '';
+    var badge = '';
+    if (data && data.bestPct >= 90) badge = '\u2B50\u2B50\u2B50';
+    else if (data && data.bestPct >= 70) badge = '\u2B50\u2B50';
+    else if (data && data.bestPct >= 50) badge = '\u2B50';
 
     card.setAttribute('aria-label',
       'Lesson ' + lesson.id + ': ' + lesson.title + ', ' + lesson.caseCount + ' cases' +
@@ -1932,6 +1935,10 @@ function showEndScreen() {
     saveScore(activeLesson.id, state.score, state.correctCount, state.totalQuestions);
   }
 
+  // Show/hide next lesson button
+  var nextIdx = STORY_LESSONS.findIndex(function(l) { return l.id === activeLesson.id; }) + 1;
+  $('btn-next-lesson').style.display = nextIdx < STORY_LESSONS.length ? '' : 'none';
+
   announce('사건 해결! 최종 점수 ' + state.score + '점. 정답 ' + state.correctCount + '개 중 ' + state.totalQuestions + '개. 최고 연속 정답 ' + state.maxStreak + '.');
   $('btn-restart').focus();
 }
@@ -2112,6 +2119,10 @@ $('btn-investigate').addEventListener('click', () => {
   if (state.screen === 'reading') startInvestigation();
 });
 $('btn-restart').addEventListener('click', showBriefing);
+$('btn-next-lesson').addEventListener('click', function() {
+  var nextIdx = STORY_LESSONS.findIndex(function(l) { return l.id === activeLesson.id; }) + 1;
+  if (nextIdx < STORY_LESSONS.length) selectLesson(STORY_LESSONS[nextIdx].id);
+});
 
 // Back button click handlers
 $('btn-back-briefing').addEventListener('click', goBackFromBriefing);
