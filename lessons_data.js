@@ -367,5 +367,191 @@ const STORY_LESSONS = [
       { type: "multiple_choice", question: "Acai berries are a _____.", options: ["snack", "meal", "superfood", "drink"], answer: 2, explanation: "아사이베리는 슈퍼 푸드예요." },
       { type: "multiple_choice", question: "The name of the show is _____.", options: ["Chef's Table", "Teens' Kitchen", "Food Lab", "Cooking Star"], answer: 1, explanation: "쇼의 이름은 Teens' Kitchen이에요." }
     ]
+  },
+
+  {
+    id: 3,
+    title: "Different Attitudes, Different Results",
+    caseCount: 3,
+
+    passages: [
+      {
+        id: 1,
+        character: "Yuna's Team",
+        characterDesc: "댄스 대회 참가를 결심한 유나의 팀",
+        page: 48,
+        text: "Every year, Yuna's school holds a dance contest. This year's contest is next month.\nYuna: Let's make a team and enter the contest.\nSuho: Are you kidding? We're all terrible dancers.\nBora: I know, but I'm interested.\nMinsu: Me, too. It'll be fun.\nYuna: Let's do it. Sounds good, Suho?\nSuho: I guess so.\nWhat will happen next? Read the following two different situations.",
+        translation: "매년 유나의 학교는 댄스 대회를 개최한다. 올해 대회는 다음 달에 있다.\n유나: 우리 팀을 만들어서 대회에 참가하자.\n수호: 농담하는 거지? 우리는 모두 춤을 못 추잖아.\n보라: 알아, 그렇지만 나는 관심이 가.\n민수: 나도. 재미있을 거야.\n유나: 한번 해 보자. 괜찮은 생각이지, 수호야?\n수호: 그런 것 같아.\n그다음에는 무슨 일이 일어날까? 다음 두 가지 다른 상황을 읽어 보자.",
+        audioKey: "para_1",
+        vocabulary: [
+          { word: "attitude", korean: "태도", audioKey: "vocab_attitude" },
+          { word: "result", korean: "결과", audioKey: "vocab_result" },
+          { word: "kid", korean: "농담하다", audioKey: "vocab_kid" },
+          { word: "terrible", korean: "끔찍한, 서투른", audioKey: "vocab_terrible" },
+          { word: "interested", korean: "관심이 있는", audioKey: "vocab_interested" }
+        ],
+        quizzes: [
+          {
+            type: "multiple_choice",
+            source: "textbook_q",
+            question: "When is the dance contest this year?",
+            audioKey: "quiz_1_1",
+            options: ["It's this week.", "It's next week.", "It's next month.", "It's next year."],
+            answer: 2,
+            explanation: "본문에 'This year's contest is next month.'라고 나와 있어요."
+          },
+          {
+            type: "multiple_choice",
+            source: "more_q",
+            question: "What does Minsu think about entering the contest?",
+            audioKey: "quiz_1_2",
+            options: ["He thinks it will be boring.", "He thinks it will be fun.", "He thinks it will be hard.", "He thinks it will be scary."],
+            answer: 1,
+            explanation: "민수가 'Me, too. It'll be fun.'이라고 했어요."
+          },
+          {
+            type: "true_false",
+            source: "custom",
+            question: "Yuna and her friends are good dancers.",
+            audioKey: "quiz_1_3",
+            answer: false,
+            explanation: "수호가 'We're all terrible dancers.'라고 했어요. 모두 춤을 잘 못 춰요."
+          },
+          {
+            type: "fill_blank",
+            source: "after_read",
+            question: "Yuna's school holds a dance _____ every year. Suho says they are all _____ dancers, but Bora is _____ in the team.",
+            audioKey: "quiz_1_4",
+            blanks: [
+              { position: 0, answer: "contest", options: ["contest", "concert", "festival", "party"] },
+              { position: 1, answer: "terrible", options: ["terrible", "great", "famous", "lucky"] },
+              { position: 2, answer: "interested", options: ["interested", "tired", "angry", "scared"] }
+            ],
+            explanation: "본문의 핵심 단어들로 빈칸을 채워 봅시다."
+          }
+        ]
+      },
+      {
+        id: 2,
+        character: "Situation 1",
+        characterDesc: "가망 없이 포기한 유나의 팀",
+        page: 49,
+        text: "D-14 Yuna and her teammates are in the practice room, but no one looks happy.\nSuho: We're making too many mistakes.\nBora: Yeah. We're hopeless.\nSuho: By the way, where's Minsu?\nYuna: Well, he's sick. He texted me.\nBora: Really? I saw him last night, and he was all right.\nD-1 The contest is tomorrow, but Yuna and her teammates are not practicing.\nSuho: I'm so tired.\nMinsu: Me, too. We're not getting anywhere.\nBora: Yeah. We're just wasting our time.\nYuna: The dance contest was not a good idea.\nSuho: I agree, but it's not your fault.\nYuna: Why don't we just quit?\nAfter weeks of unhappy practices, they finally quit. They felt hopeless.",
+        translation: "D-14 유나와 팀원들은 연습실에 있지만, 아무도 즐거워 보이지 않는다.\n수호: 우리는 실수를 너무 많이 하고 있어.\n보라: 맞아. 우리는 가망이 없어.\n수호: 그나저나, 민수는 어딨어?\n유나: 글쎄, 아프대. 나한테 문자했어.\n보라: 정말? 내가 어젯밤에 민수를 봤는데 괜찮았어.\nD-1 대회는 내일인데, 유나와 팀원들은 연습을 하고 있지 않다.\n수호: 나 너무 피곤해.\n민수: 나도야. 우리는 더 나아지지 않고 있어.\n보라: 맞아. 우리는 시간 낭비만 하는 거라니까.\n유나: 댄스 대회는 좋지 못한 생각이었어.\n수호: 나도 동의하지만, 그게 네 잘못은 아니야.\n유나: 우리 그냥 그만두는 게 어때?\n몇 주간의 불만족스러운 연습 후에, 그들은 마침내 관뒀다. 그들은 가망이 없다고 느꼈다.",
+        audioKey: "para_2",
+        vocabulary: [
+          { word: "hopeless", korean: "형편없는, 가망 없는", audioKey: "vocab_hopeless" },
+          { word: "by the way", korean: "그런데, 그나저나", audioKey: "vocab_by_the_way" },
+          { word: "waste", korean: "낭비하다", audioKey: "vocab_waste" },
+          { word: "fault", korean: "잘못", audioKey: "vocab_fault" },
+          { word: "quit", korean: "그만두다", audioKey: "vocab_quit" },
+          { word: "finally", korean: "마침내", audioKey: "vocab_finally" }
+        ],
+        quizzes: [
+          {
+            type: "multiple_choice",
+            source: "textbook_q",
+            question: "Who didn't come to the practice on D-14?",
+            audioKey: "quiz_2_1",
+            options: ["Yuna didn't come.", "Suho didn't come.", "Bora didn't come.", "Minsu didn't come."],
+            answer: 3,
+            explanation: "수호가 'Where's Minsu?'라고 묻자 유나가 '아프대'라고 답했어요. D-14에 민수는 오지 않았어요."
+          },
+          {
+            type: "multiple_choice",
+            source: "more_q",
+            question: "Why didn't Bora think Minsu was really sick?",
+            audioKey: "quiz_2_2",
+            options: ["She talked to Minsu's mom.", "She saw Minsu last night, and he was all right.", "Minsu didn't text her back.", "Minsu was at school in the morning."],
+            answer: 1,
+            explanation: "보라가 'I saw him last night, and he was all right.'라고 했어요."
+          },
+          {
+            type: "true_false",
+            source: "custom",
+            question: "Yuna's team won the dance contest.",
+            audioKey: "quiz_2_3",
+            answer: false,
+            explanation: "Situation 1에서 그들은 대회 전에 'finally quit' 했어요. 대회에 나가지도 않았어요."
+          },
+          {
+            type: "fill_blank",
+            source: "after_read",
+            question: "Yuna's team made too many mistakes and felt _____. After weeks of unhappy practices, they _____ quit. They thought they were _____ their time.",
+            audioKey: "quiz_2_4",
+            blanks: [
+              { position: 0, answer: "hopeless", options: ["hopeless", "hopeful", "excited", "proud"] },
+              { position: 1, answer: "finally", options: ["finally", "happily", "loudly", "carefully"] },
+              { position: 2, answer: "wasting", options: ["wasting", "spending", "saving", "enjoying"] }
+            ],
+            explanation: "본문의 핵심 단어들로 빈칸을 채워 봅시다."
+          }
+        ]
+      },
+      {
+        id: 3,
+        character: "Situation 2",
+        characterDesc: "서로 응원하며 끝까지 해낸 유나의 팀",
+        page: 50,
+        text: "D-14 Yuna and her teammates are practicing hard in the practice room.\nSuho: I made a mistake again. I'm sorry.\nYuna: Cheer up! You can do it.\nMinsu: Yes. Don't worry, Suho. We all make mistakes.\nBora: Come on. Let's do it one more time! We're almost there.\nD-Day The contest is over now. Yuna's team didn't win any prizes, but they all look happy.\nYuna: Good job! We made it.\nMinsu: Yeah! We finished the dance without a big mistake. I feel great!\nBora: We did our best, and I'm so proud of all of us.\nSuho: Thank you for your support, everyone.",
+        translation: "D-14 유나와 팀원들은 연습실에서 열심히 연습을 하고 있다.\n수호: 난 또 실수했어. 미안해.\n유나: 힘내! 너는 할 수 있어.\n민수: 맞아. 걱정하지 마, 수호야. 우리는 모두 실수해.\n보라: 자. 한 번 더 해 보자! 거의 다 왔어.\nD-Day 대회는 지금 끝이 났다. 유나의 팀은 아무런 상도 받지 못했지만, 그들은 모두 행복해 보인다.\n유나: 잘했어! 우리가 해냈어.\n민수: 맞아! 우리는 큰 실수 없이 춤을 끝냈어. 나는 기분이 좋아!\n보라: 우리는 최선을 다했고, 난 우리 모두가 정말 자랑스러워.\n수호: 모두들 응원해 줘서 고마워.",
+        audioKey: "para_3",
+        vocabulary: [
+          { word: "make a mistake", korean: "실수하다", audioKey: "vocab_make_a_mistake" },
+          { word: "worry", korean: "걱정하다", audioKey: "vocab_worry" },
+          { word: "prize", korean: "상", audioKey: "vocab_prize" },
+          { word: "do one's best", korean: "최선을 다하다", audioKey: "vocab_do_ones_best" },
+          { word: "be proud of", korean: "~을 자랑으로 여기다", audioKey: "vocab_be_proud_of" },
+          { word: "support", korean: "지지, 응원", audioKey: "vocab_support" }
+        ],
+        quizzes: [
+          {
+            type: "multiple_choice",
+            source: "textbook_q",
+            question: "Why did Minsu feel great after the contest?",
+            audioKey: "quiz_3_1",
+            options: ["Because the team won first prize.", "Because they finished the dance without a big mistake.", "Because the contest was canceled.", "Because Minsu got a solo part."],
+            answer: 1,
+            explanation: "민수가 'We finished the dance without a big mistake. I feel great!'이라고 했어요."
+          },
+          {
+            type: "multiple_choice",
+            source: "more_q",
+            question: "How did Yuna's team look after the contest?",
+            audioKey: "quiz_3_2",
+            options: ["They looked tired.", "They looked angry.", "They all looked happy.", "They looked disappointed."],
+            answer: 2,
+            explanation: "본문에 'they all look happy'라고 나와 있어요. 상은 못 받았지만 모두 행복해 보였어요."
+          },
+          {
+            type: "true_false",
+            source: "custom",
+            question: "Yuna's team won a prize at the dance contest.",
+            audioKey: "quiz_3_3",
+            answer: false,
+            explanation: "'Yuna's team didn't win any prizes'라고 했어요. 상은 받지 못했지만 최선을 다해서 자랑스러워했어요."
+          },
+          {
+            type: "fill_blank",
+            source: "after_read",
+            question: "When Suho made a mistake, Yuna said \"_____ up!\". After the contest, Bora said \"We did our _____, and I'm so _____ of all of us.\"",
+            audioKey: "quiz_3_4",
+            blanks: [
+              { position: 0, answer: "Cheer", options: ["Cheer", "Wake", "Get", "Stand"] },
+              { position: 1, answer: "best", options: ["best", "worst", "homework", "dance"] },
+              { position: 2, answer: "proud", options: ["proud", "tired", "scared", "shy"] }
+            ],
+            explanation: "본문의 핵심 단어들로 빈칸을 채워 봅시다."
+          }
+        ]
+      }
+    ],
+
+    bonusQuizzes: [
+      { type: "multiple_choice", question: "The big idea of this lesson is: Different attitudes lead to different _____.", options: ["results", "schools", "songs", "prizes"], answer: 0, explanation: "이 단원의 큰 주제는 '다른 태도, 다른 결과'예요." },
+      { type: "multiple_choice", question: "In Situation 1, Yuna's team felt _____ and quit before the contest.", options: ["hopeful", "hopeless", "excited", "proud"], answer: 1, explanation: "Situation 1에서 그들은 가망이 없다고 느끼고 마침내 그만뒀어요." },
+      { type: "multiple_choice", question: "When Suho made a mistake, Yuna said \"_____ up! You can do it.\"", options: ["Wake", "Stand", "Cheer", "Get"], answer: 2, explanation: "유나는 '힘내!'라는 뜻의 'Cheer up!'으로 수호를 격려했어요." },
+      { type: "multiple_choice", question: "After the contest, Bora said: \"We did our _____, and I'm so proud of all of us.\"", options: ["best", "worst", "dance", "homework"], answer: 0, explanation: "'do one's best'는 '최선을 다하다'라는 뜻이에요." }
+    ]
   }
 ];
