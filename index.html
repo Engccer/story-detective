@@ -1024,11 +1024,13 @@ function buildResultText() {
   const total = state.totalQuestions || 0;
   const pct = total ? Math.round(state.correctCount / total * 100) : 0;
   const lessonId = activeLesson ? activeLesson.id : '';
+  const pad = (n) => String(n).padStart(2, '0');
+  const d = new Date();
+  const stamp = d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()) +
+    ' ' + pad(d.getHours()) + ':' + pad(d.getMinutes());
   return (
-    '🔍 Story Detective — Lesson ' + lessonId + '\n' +
-    '- 점수: ' + state.score + '점\n' +
-    '- 정답: ' + state.correctCount + '/' + total + ' (' + pct + '%)\n' +
-    '- 단서: ' + state.solvedPassages.length + '/' + (D ? D.passages.length : 0)
+    '🔍 Story Detective — Lesson ' + lessonId + ' · ' + stamp + '\n' +
+    '점수 ' + state.score + '점 · 정답 ' + state.correctCount + '/' + total + ' (' + pct + '%)'
   );
 }
 
