@@ -553,5 +553,195 @@ const STORY_LESSONS = [
       { type: "multiple_choice", question: "When Suho made a mistake, Yuna said \"_____ up! You can do it.\"", options: ["Wake", "Stand", "Cheer", "Get"], answer: 2, explanation: "유나는 '힘내!'라는 뜻의 'Cheer up!'으로 수호를 격려했어요." },
       { type: "multiple_choice", question: "After the contest, Bora said: \"We did our _____, and I'm so proud of all of us.\"", options: ["best", "worst", "dance", "homework"], answer: 0, explanation: "'do one's best'는 '최선을 다하다'라는 뜻이에요." }
     ]
+  },
+
+  {
+    id: 4,
+    title: "The Colorful Villages of the World",
+    caseCount: 3,
+
+    passages: [
+      {
+        id: 1,
+        character: "Minji in Ronda",
+        characterDesc: "스페인 론다의 절벽 마을에서 수미에게 편지를 쓰는 민지",
+        page: 65,
+        text: "Hi Sumi,\nYesterday, my family and I came to Ronda in Spain. Most buildings here are white, and they are so beautiful against the blue sky. And the views! Ronda is on cliffs, so the views are fantastic. Now, we're eating lunch on the terrace of a restaurant. All the food here is great, but I especially like the churros. After lunch, we're going to visit the Ernest Hemingway Walk. Hemingway loved Ronda and spent many summers here.\nYour friend,\nMinji",
+        translation: "안녕, 수미야.\n어제 우리 가족과 나는 스페인의 론다에 왔어. 여기에 있는 대부분의 건물들은 하얀색이고, 파란 하늘과 대비되어 정말 아름다워. 그리고 경치도! 론다는 절벽 위에 있어서 경치가 환상적이야. 지금, 우리는 식당 테라스에서 점심을 먹고 있어. 이곳의 모든 음식이 훌륭하지만, 나는 특히 추로스가 좋아. 점심 후에, 우리는 Ernest Hemingway 산책로를 방문할 예정이야. Hemingway는 론다를 매우 좋아했고 이곳에서 여러 번의 여름을 보냈어.\n너의 친구,\n민지가",
+        audioKey: "para_1",
+        vocabulary: [
+          { word: "village", korean: "마을", audioKey: "vocab_village" },
+          { word: "view", korean: "경치", audioKey: "vocab_view" },
+          { word: "cliff", korean: "절벽", audioKey: "vocab_cliff" },
+          { word: "fantastic", korean: "환상적인", audioKey: "vocab_fantastic" },
+          { word: "terrace", korean: "테라스", audioKey: "vocab_terrace" },
+          { word: "especially", korean: "특히, 특별히", audioKey: "vocab_especially" },
+          { word: "spend", korean: "(시간을) 보내다", audioKey: "vocab_spend" }
+        ],
+        quizzes: [
+          {
+            type: "multiple_choice",
+            source: "textbook_q",
+            question: "What color are most buildings in Ronda?",
+            audioKey: "quiz_1_1",
+            options: ["They're blue.", "They're white.", "They're purple.", "They're yellow."],
+            answer: 1,
+            explanation: "본문에 'Most buildings here are white'라고 나와 있어요."
+          },
+          {
+            type: "multiple_choice",
+            source: "more_q",
+            question: "What are Minji and her family doing in Ronda?",
+            audioKey: "quiz_1_2",
+            options: ["They're shopping at a souvenir store.", "They're walking on a cliff.", "They're eating lunch on the terrace of a restaurant.", "They're visiting the Ernest Hemingway Walk."],
+            answer: 2,
+            explanation: "본문에 \"Now, we're eating lunch on the terrace of a restaurant.\"라고 나와 있어요. Hemingway Walk는 점심 후 갈 예정이에요."
+          },
+          {
+            type: "true_false",
+            source: "custom",
+            question: "Ernest Hemingway spent many summers in Ronda.",
+            audioKey: "quiz_1_3",
+            answer: true,
+            explanation: "본문에 'Hemingway loved Ronda and spent many summers here.'라고 나와 있어요."
+          },
+          {
+            type: "fill_blank",
+            source: "after_read",
+            question: "Ronda is in _____. Most buildings are _____. Ronda is on _____, so the views are fantastic.",
+            audioKey: "quiz_1_4",
+            blanks: [
+              { position: 0, answer: "Spain", options: ["Spain", "Morocco", "Korea", "France"] },
+              { position: 1, answer: "white", options: ["white", "blue", "purple", "yellow"] },
+              { position: 2, answer: "cliffs", options: ["cliffs", "hills", "rivers", "islands"] }
+            ],
+            explanation: "After You Read의 Read and Complete 활동을 본문에서 확인해 봅시다."
+          }
+        ]
+      },
+      {
+        id: 2,
+        character: "Uncle Jay in Chefchaouen",
+        characterDesc: "모로코 쉐프샤우엔, '푸른 진주'에서 인호에게 편지를 쓰는 Jay 삼촌",
+        page: 67,
+        text: "Hi Inho,\nI'm in Chefchaouen, the Blue Pearl of Morocco. All day long, I enjoyed taking pictures of the blue streets and blue buildings. I also enjoyed walking through the narrow streets. They were full of interesting shops, and I bought some souvenirs. Now, I'm drinking mint tea at a tea house, just like the locals. Chefchaouen is famous for its sunrises.\nTomorrow, I'm going to get up early and enjoy a beautiful sunrise.\nBest,\nUncle Jay",
+        translation: "안녕, 인호야.\n나는 모로코의 푸른 진주, 쉐프샤우엔에 있어. 하루 종일 나는 파란색 길과 파란색 건물들의 사진을 찍는 것을 즐겼어. 나는 좁은 길 사이를 걸어 다니는 것도 즐거웠어. 그곳은 흥미로운 가게들로 가득 차 있었고, 나는 기념품도 몇 개 샀지. 지금 나는 현지인들처럼 찻집에서 민트 차를 마시고 있어. 쉐프샤우엔은 일출로 유명해.\n내일 나는 일찍 일어나서 아름다운 일출을 즐겨 보려고 해.\n안부를 전하며,\nJay 삼촌이",
+        audioKey: "para_2",
+        vocabulary: [
+          { word: "pearl", korean: "진주", audioKey: "vocab_pearl" },
+          { word: "narrow", korean: "좁은", audioKey: "vocab_narrow" },
+          { word: "be full of", korean: "~으로 가득 차다", audioKey: "vocab_be_full_of" },
+          { word: "souvenir", korean: "기념품", audioKey: "vocab_souvenir" },
+          { word: "tea", korean: "차", audioKey: "vocab_tea" },
+          { word: "local", korean: "주민, 현지인", audioKey: "vocab_local" },
+          { word: "famous", korean: "유명한", audioKey: "vocab_famous" }
+        ],
+        quizzes: [
+          {
+            type: "multiple_choice",
+            source: "textbook_q",
+            question: "What did Uncle Jay buy in the shops?",
+            audioKey: "quiz_2_1",
+            options: ["He bought some books.", "He bought some clothes.", "He bought some souvenirs.", "He bought some food."],
+            answer: 2,
+            explanation: "본문에 'I bought some souvenirs.'라고 나와 있어요."
+          },
+          {
+            type: "multiple_choice",
+            source: "more_q",
+            question: "What is Uncle Jay drinking at a tea house?",
+            audioKey: "quiz_2_2",
+            options: ["He is drinking coffee.", "He is drinking mint tea.", "He is drinking orange juice.", "He is drinking water."],
+            answer: 1,
+            explanation: "본문에 \"I'm drinking mint tea at a tea house, just like the locals.\"라고 나와 있어요."
+          },
+          {
+            type: "true_false",
+            source: "custom",
+            question: "Chefchaouen is famous for its sunsets.",
+            audioKey: "quiz_2_3",
+            answer: false,
+            explanation: "본문에 'Chefchaouen is famous for its sunrises.'라고 했어요. 일출(sunrise)로 유명하지 일몰(sunset)이 아니에요."
+          },
+          {
+            type: "fill_blank",
+            source: "after_read",
+            question: "Chefchaouen is in _____. Its color is _____. The narrow streets are full of interesting _____.",
+            audioKey: "quiz_2_4",
+            blanks: [
+              { position: 0, answer: "Morocco", options: ["Morocco", "Spain", "Korea", "Egypt"] },
+              { position: 1, answer: "blue", options: ["blue", "white", "purple", "red"] },
+              { position: 2, answer: "shops", options: ["shops", "schools", "cars", "trees"] }
+            ],
+            explanation: "After You Read의 Read and Complete 활동을 본문에서 확인해 봅시다."
+          }
+        ]
+      },
+      {
+        id: 3,
+        character: "Amy on Purple Island",
+        characterDesc: "한국의 보라섬에서 엄마에게 편지를 쓰는 Amy",
+        page: 68,
+        text: "Dear Mom,\nI'm on Purple Island in Korea. Almost everything here is purple - the houses, the buses, and even the bridges. Purple is my favorite color, so the island is just perfect for me. I didn't even pay the entrance fee to the island. Why? I was wearing a purple T-shirt. Now, I'm on my way to a bike rental shop. The island is not big, so I'm going to explore it by bicycle. I'm especially looking forward to visiting the Lavender Garden.\nLove,\nAmy",
+        translation: "엄마에게,\n저는 한국의 보라섬에 있어요. 이곳은 거의 모든 것이 보라색이에요 — 집, 버스, 그리고 심지어 다리까지요. 보라색은 제가 제일 좋아하는 색이라, 이 섬은 저에게 완벽한 곳이에요. 저는 이 섬의 입장료도 내지 않았어요. 왜냐고요? 보라색 티셔츠를 입고 있었기 때문이에요. 지금, 저는 자전거 대여소로 가는 중이에요. 이 섬은 크지 않아서, 자전거로 돌아다니면서 답사할 거예요. 저는 특히 라벤더 정원에 방문하는 것이 기대돼요.\n사랑을 담아,\nAmy 올림",
+        audioKey: "para_3",
+        vocabulary: [
+          { word: "purple", korean: "보라색의, 보라색", audioKey: "vocab_purple" },
+          { word: "island", korean: "섬", audioKey: "vocab_island" },
+          { word: "fee", korean: "요금", audioKey: "vocab_fee" },
+          { word: "on one's way to", korean: "~로 가는 길에", audioKey: "vocab_on_ones_way_to" },
+          { word: "rental", korean: "대여, 임대", audioKey: "vocab_rental" },
+          { word: "explore", korean: "탐험하다, 답사하다", audioKey: "vocab_explore" },
+          { word: "bicycle", korean: "자전거", audioKey: "vocab_bicycle" }
+        ],
+        quizzes: [
+          {
+            type: "multiple_choice",
+            source: "textbook_q",
+            question: "Why didn't Amy pay the entrance fee to the island?",
+            audioKey: "quiz_3_1",
+            options: ["She was very young.", "She was a local resident.", "She was wearing a purple T-shirt.", "She was a tour guide."],
+            answer: 2,
+            explanation: "본문에 'Why? I was wearing a purple T-shirt.'라고 나와 있어요."
+          },
+          {
+            type: "multiple_choice",
+            source: "more_q",
+            question: "How is Amy going to explore the island?",
+            audioKey: "quiz_3_2",
+            options: ["She is going to explore the island on foot.", "She is going to explore the island by bicycle.", "She is going to explore the island by bus.", "She is going to explore the island by boat."],
+            answer: 1,
+            explanation: "본문에 \"I'm going to explore it by bicycle.\"라고 나와 있어요."
+          },
+          {
+            type: "true_false",
+            source: "custom",
+            question: "Amy is most excited about visiting the Lavender Garden.",
+            audioKey: "quiz_3_3",
+            answer: true,
+            explanation: "본문에 \"I'm especially looking forward to visiting the Lavender Garden.\"이라고 했어요."
+          },
+          {
+            type: "fill_blank",
+            source: "after_read",
+            question: "Purple Island is in _____. Its color is _____. The island is not big, so visitors can explore it by _____.",
+            audioKey: "quiz_3_4",
+            blanks: [
+              { position: 0, answer: "Korea", options: ["Korea", "Spain", "Morocco", "Japan"] },
+              { position: 1, answer: "purple", options: ["purple", "white", "blue", "green"] },
+              { position: 2, answer: "bicycle", options: ["bicycle", "bus", "car", "boat"] }
+            ],
+            explanation: "After You Read의 Read and Complete 활동을 본문에서 확인해 봅시다."
+          }
+        ]
+      }
+    ],
+
+    bonusQuizzes: [
+      { type: "multiple_choice", question: "The big idea of this lesson is: Three travelers visit colorful villages around the _____.", options: ["world", "city", "town", "school"], answer: 0, explanation: "단원 제목 'The Colorful Villages of the World'에서 알 수 있어요." },
+      { type: "multiple_choice", question: "Which of these is NOT mentioned in any of the three letters?", options: ["churros", "mint tea", "Lavender Garden", "blue mountains"], answer: 3, explanation: "추로스(론다), 민트 차(쉐프샤우엔), 라벤더 정원(보라섬)은 본문에 있지만, '파란 산'은 본문에 없어요." },
+      { type: "multiple_choice", question: "In Ronda, Minji's family is going to visit the _____ Walk after lunch.", options: ["Picasso", "Ernest Hemingway", "Don Quixote", "Cervantes"], answer: 1, explanation: "본문에 \"we're going to visit the Ernest Hemingway Walk.\"라고 나와 있어요." },
+      { type: "multiple_choice", question: "Chefchaouen is called the Blue _____ of Morocco.", options: ["Star", "Ocean", "Pearl", "Sky"], answer: 2, explanation: "본문에 'Chefchaouen, the Blue Pearl of Morocco.'라고 나와 있어요." }
+    ]
   }
 ];
