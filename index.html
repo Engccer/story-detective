@@ -1013,12 +1013,14 @@ function playAudio(key) {
 }
 
 /* ===== ACCESSIBILITY ===== */
+/* ===== SCREEN READER ===== */
 function announce(msg) {
   const el = $('sr-announce');
   el.textContent = '';
   requestAnimationFrame(() => { el.textContent = msg; });
 }
 
+/* ===== RESULT COPY ===== */
 /* ===== RESULT COPY ===== */
 function buildResultText() {
   const total = state.totalQuestions || 0;
@@ -1081,6 +1083,7 @@ function fallbackCopy(text, onSuccess, onFail) {
 }
 
 /* ===== UTILS ===== */
+/* ===== UTILITIES ===== */
 function shuffle(arr) {
   const a = [...arr];
   for (let i = a.length - 1; i > 0; i--) {
@@ -1279,6 +1282,7 @@ function advanceBriefing() {
   }
 }
 
+/* ===== NAVIGATION (BACK BUTTONS) ===== */
 function goBackFromBriefing() {
   if (briefingTimeout) { clearTimeout(briefingTimeout); briefingTimeout = null; }
   if (typewriterTimer) { clearInterval(typewriterTimer); typewriterTimer = null; }
@@ -1311,6 +1315,7 @@ function goBackToLessonSelect() {
 }
 
 /* ===== SCREENS ===== */
+/* ===== SCREEN MANAGEMENT ===== */
 function showScreen(id) {
   document.querySelectorAll('.screen').forEach(s => s.classList.add('hidden'));
   $(id).classList.remove('hidden');
@@ -1325,6 +1330,7 @@ function showPanel(id) {
 }
 
 /* ===== LESSON SELECT & AUDIO LOADING ===== */
+/* ===== AUDIO LOADER ===== */
 function loadLessonAudio(lessonId) {
   return new Promise(function(resolve) {
     var varName = 'AUDIO_L' + lessonId;
@@ -1347,6 +1353,7 @@ function loadLessonAudio(lessonId) {
   });
 }
 
+/* ===== LOCALSTORAGE ===== */
 function loadScores() {
   try { return JSON.parse(localStorage.getItem('storydetective_scores') || '{}'); }
   catch (e) { return {}; }
@@ -1368,6 +1375,7 @@ function saveScore(lessonId, score, correct, total) {
   } catch (e) {}
 }
 
+/* ===== LESSON SELECT ===== */
 function renderLessonGrid() {
   var grid = $('lesson-grid');
   var scores = loadScores();
@@ -1464,6 +1472,7 @@ function init() {
   showLessonSelect();
 }
 
+/* ===== CASE SELECT ===== */
 function buildCaseCards() {
   const grid = $('case-grid');
   grid.innerHTML = '';
@@ -1533,6 +1542,7 @@ function animateCaseCards() {
   }
 }
 
+/* ===== READING / PASSAGE ===== */
 function startPassage(idx) {
   state.passageIdx = idx;
   state.translationVisible = false;
@@ -1577,6 +1587,7 @@ function startInvestigation() {
 }
 
 /* ===== QUIZ ===== */
+/* ===== QUIZ ENGINE ===== */
 function loadQuiz() {
   const p = D.passages[state.passageIdx];
   const qIdx = state.quizOrder[state.quizIdx];
@@ -1833,6 +1844,7 @@ function advanceFromQuiz() {
 }
 
 /* ===== VOCAB REVIEW ===== */
+/* ===== VOCAB REVIEW ===== */
 function showVocabReview() {
   const p = D.passages[state.passageIdx];
   showPanel('vocab-panel');
@@ -1872,6 +1884,7 @@ function playVocabAudio() {
 }
 
 /* ===== CLUE COLLECTED ===== */
+/* ===== CLUE COLLECTION ===== */
 function showClueCollected() {
   state.solvedPassages.push(state.passageIdx);
   $('top-clues').textContent = state.solvedPassages.length;
@@ -1904,6 +1917,7 @@ function dismissClue() {
   }
 }
 
+/* ===== BONUS ROUND ===== */
 /* ===== BONUS ROUND ===== */
 function startBonusRound() {
   if (D.bonusQuizzes.length === 0) {
@@ -2002,6 +2016,7 @@ function advanceBonus() {
 }
 
 /* ===== END SCREEN ===== */
+/* ===== END SCREEN ===== */
 function showEndScreen() {
   state.screen = 'end';
   showScreen('end-screen');
@@ -2034,6 +2049,7 @@ function showEndScreen() {
   $('btn-restart').focus();
 }
 
+/* ===== PARTICLES ===== */
 /* ===== PARTICLES ===== */
 function spawnSparkles() {
   const colors = ['#d4a030','#e8b849','#ffd700','#fff'];
