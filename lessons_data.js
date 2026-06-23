@@ -743,5 +743,191 @@ const STORY_LESSONS = [
       { type: "multiple_choice", question: "In Ronda, Minji's family is going to visit the _____ Walk after lunch.", options: ["Picasso", "Ernest Hemingway", "Don Quixote", "Cervantes"], answer: 1, explanation: "본문에 \"we're going to visit the Ernest Hemingway Walk.\"라고 나와 있어요." },
       { type: "multiple_choice", question: "Chefchaouen is called the Blue _____ of Morocco.", options: ["Star", "Ocean", "Pearl", "Sky"], answer: 2, explanation: "본문에 'Chefchaouen, the Blue Pearl of Morocco.'라고 나와 있어요." }
     ]
+  },
+  {
+    id: 5,
+    title: "Who Threw a Cake at the Monalisa?",
+    caseCount: 3,
+
+    passages: [
+      {
+        id: 1,
+        character: "Ann & Carlos",
+        characterDesc: "사건 현장의 두 목격자 — 방문객 Ann과 청소부 Carlos",
+        page: 82,
+        text: "Last Saturday, someone threw a cake at the Monalisa in the Botero Museum in Bogota, Colombia. There were four eyewitnesses. What did they say? Read the following, and find the criminal.\nAnn Jones, a visitor\nI was looking at the Monalisa, and someone threw a cake at the painting. I turned around and saw an old man. He was standing in front of a wheelchair. I'm about 170 cm tall, and he was a little taller than me.\nCarlos Diaz, a janitor\nAn old man with gray hair was running away, and something fell off his head. It was his wig. I ran after him, but I couldn't catch him. He was faster than me. In fact, the old man was not old. He was a young man with long brown hair.",
+        translation: "지난 토요일, 누군가가 콜롬비아 보고타에 있는 보테로 박물관의 '모나리자'에 케이크를 던졌다. 네 명의 목격자가 있었다. 그들이 뭐라고 말했을까? 다음을 읽고, 범인을 찾아보자.\nAnn Jones, 방문객\n저는 '모나리자'를 보고 있었는데, 누군가가 그림을 향해 케이크를 던졌어요. 저는 뒤를 돌아봤고 한 노인을 봤어요. 그는 휠체어 앞에 서 있었어요. 저는 키가 약 170cm 정도인데, 그는 저보다 조금 더 컸어요.\nCarlos Diaz, 청소부\n회색 머리의 한 노인이 도망가고 있었고, 그의 머리에서 뭔가가 떨어졌어요. 그것은 그의 가발이었어요. 저는 그를 뒤쫓았지만, 잡지 못했어요. 그는 저보다 더 빨랐어요. 사실, 그 노인은 나이 든 사람이 아니었어요. 그는 긴 갈색 머리의 젊은 남자였어요.",
+        audioKey: "para_1",
+        vocabulary: [
+          { word: "throw", korean: "던지다 (-threw)", audioKey: "vocab_throw" },
+          { word: "eyewitness", korean: "목격자", audioKey: "vocab_eyewitness" },
+          { word: "criminal", korean: "범인, 범죄자", audioKey: "vocab_criminal" },
+          { word: "wheelchair", korean: "휠체어", audioKey: "vocab_wheelchair" },
+          { word: "janitor", korean: "청소부, 관리인", audioKey: "vocab_janitor" },
+          { word: "run away", korean: "도망치다", audioKey: "vocab_run_away" },
+          { word: "wig", korean: "가발", audioKey: "vocab_wig" }
+        ],
+        quizzes: [
+          {
+            type: "multiple_choice",
+            source: "textbook_q",
+            question: "How tall was the old man?",
+            audioKey: "quiz_1_1",
+            options: ["He was shorter than 170 cm.", "He was exactly 170 cm.", "He was a little taller than 170 cm.", "He was 182 cm tall."],
+            answer: 2,
+            explanation: "Ann이 'I'm about 170 cm tall, and he was a little taller than me.'라고 했어요. 170cm보다 조금 큰 키예요."
+          },
+          {
+            type: "multiple_choice",
+            source: "more_q",
+            question: "Why couldn't Carlos catch the man?",
+            audioKey: "quiz_1_2",
+            options: ["The man was faster than Carlos.", "The man hid in the museum.", "Carlos fell down.", "A guard stopped Carlos."],
+            answer: 0,
+            explanation: "Carlos가 'He was faster than me.'라고 했어요. 그 남자가 더 빨라서 잡지 못했어요."
+          },
+          {
+            type: "true_false",
+            source: "custom",
+            question: "The old man with gray hair was really an old man.",
+            audioKey: "quiz_1_3",
+            answer: false,
+            explanation: "Carlos가 'In fact, the old man was not old. He was a young man with long brown hair.'라고 했어요. 노인은 변장한 젊은 남자였어요."
+          },
+          {
+            type: "fill_blank",
+            source: "after_read",
+            question: "The man was a little _____ than 170 cm. His _____ fell off his head. He was really a _____ man.",
+            audioKey: "quiz_1_4",
+            blanks: [
+              { position: 0, answer: "taller", options: ["taller", "shorter", "older", "slower"] },
+              { position: 1, answer: "wig", options: ["wig", "hat", "bag", "phone"] },
+              { position: 2, answer: "young", options: ["young", "old", "tall", "kind"] }
+            ],
+            explanation: "목격자들의 증언을 정리하면, 범인은 170cm보다 조금 크고, 가발이 떨어졌으며, 사실 젊은 남자였어요."
+          }
+        ]
+      },
+      {
+        id: 2,
+        character: "Diego & Camila",
+        characterDesc: "범죄 현장을 조사한 경비원 Diego와 빵집 주인 Camila",
+        page: 83,
+        text: "Diego Perez, a guard\nI went to the crime scene, and there were pieces of cake all over the painting. There was also a wheelchair near the painting, and I found a cake box next to the wheelchair. The box was from Camila's Bakery.\nCamila Santos, the owner of Camila's Bakery\nLast Friday, a young man came in. I spoke to him in Spanish, but he didn't understand me. He spoke only English. We had a lot of different cakes, but he just wanted the smallest one. We sold only one cake on that day, so I remember him clearly. Oh, he had blue eyes.",
+        translation: "Diego Perez, 경비원\n저는 범죄 현장에 갔는데, 그림 곳곳에 케이크 조각들이 있었어요. 그림 주변에는 휠체어도 있었고, 저는 휠체어 옆에 있는 케이크 상자를 발견했어요. 그 상자는 Camila 빵집의 상자였어요.\nCamila Santos, Camila 빵집의 주인\n지난 금요일, 한 젊은 남자가 들어왔어요. 저는 그에게 스페인어로 말했지만, 그는 제 말을 이해하지 못했어요. 그는 영어로만 말했어요. 우리 가게에는 각각 다른 많은 케이크들이 있었는데, 그는 그냥 가장 작은 것을 원했어요. 우리는 그날 케이크를 딱 한 개 팔았어요. 그래서 그를 똑똑히 기억해요. 아, 그의 눈은 파란색이었어요.",
+        audioKey: "para_2",
+        vocabulary: [
+          { word: "guard", korean: "경비원", audioKey: "vocab_guard" },
+          { word: "crime scene", korean: "범죄 현장", audioKey: "vocab_crime_scene" },
+          { word: "piece", korean: "조각", audioKey: "vocab_piece" },
+          { word: "bakery", korean: "빵집", audioKey: "vocab_bakery" },
+          { word: "owner", korean: "주인", audioKey: "vocab_owner" },
+          { word: "understand", korean: "이해하다 (-understood)", audioKey: "vocab_understand" },
+          { word: "clearly", korean: "분명히, 똑똑히", audioKey: "vocab_clearly" }
+        ],
+        quizzes: [
+          {
+            type: "multiple_choice",
+            source: "textbook_q",
+            question: "What did Diego find next to the wheelchair?",
+            audioKey: "quiz_2_1",
+            options: ["He found a cake box.", "He found a wig.", "He found a phone.", "He found a painting."],
+            answer: 0,
+            explanation: "Diego가 'I found a cake box next to the wheelchair.'라고 했어요."
+          },
+          {
+            type: "multiple_choice",
+            source: "more_q",
+            question: "What language did the young man speak?",
+            audioKey: "quiz_2_2",
+            options: ["He spoke only Spanish.", "He spoke only English.", "He spoke Spanish and English.", "He spoke only French."],
+            answer: 1,
+            explanation: "Camila가 'He spoke only English.'라고 했어요. 스페인어는 이해하지 못했어요."
+          },
+          {
+            type: "true_false",
+            source: "custom",
+            question: "Camila sold many cakes on that day.",
+            audioKey: "quiz_2_3",
+            answer: false,
+            explanation: "Camila가 'We sold only one cake on that day, so I remember him clearly.'라고 했어요. 그날 케이크를 딱 한 개 팔았어요."
+          },
+          {
+            type: "fill_blank",
+            source: "after_read",
+            question: "Diego found a _____ box next to the wheelchair. The man spoke only _____. He had _____ eyes.",
+            audioKey: "quiz_2_4",
+            blanks: [
+              { position: 0, answer: "cake", options: ["cake", "music", "tool", "gift"] },
+              { position: 1, answer: "English", options: ["English", "Spanish", "French", "Korean"] },
+              { position: 2, answer: "blue", options: ["blue", "brown", "green", "black"] }
+            ],
+            explanation: "케이크 상자, 영어만 사용, 파란 눈 — 이 단서들이 범인을 찾는 열쇠예요."
+          }
+        ]
+      },
+      {
+        id: 3,
+        character: "The Suspects",
+        characterDesc: "네 명의 용의자 정보 — 단서를 모아 진짜 범인을 찾아라",
+        page: 84,
+        text: "Now, look at the information about the suspects. Who threw the cake at the Monalisa?\nAndres Lozano - Height: 176 cm; Hair: long, black; Languages: Spanish, English; Eyes: brown\nLarry Johnson - Height: 173 cm; Hair: long, brown; Languages: English; Eyes: blue\nTim Baker - Height: 182 cm; Hair: long, brown; Languages: English; Eyes: green\nLuca Ferez - Height: 166 cm; Hair: short, gray; Languages: Spanish; Eyes: blue",
+        translation: "이제, 용의자들에 대한 정보를 봐라. 누가 '모나리자'에 케이크를 던졌을까?\nAndres Lozano - 키: 176cm, 머리: 긴 머리·검은색, 언어: 스페인어·영어, 눈: 갈색\nLarry Johnson - 키: 173cm, 머리: 긴 머리·갈색, 언어: 영어, 눈: 파란색\nTim Baker - 키: 182cm, 머리: 긴 머리·갈색, 언어: 영어, 눈: 초록색\nLuca Ferez - 키: 166cm, 머리: 짧은 머리·회색, 언어: 스페인어, 눈: 파란색",
+        audioKey: "para_3",
+        vocabulary: [
+          { word: "suspect", korean: "용의자", audioKey: "vocab_suspect" },
+          { word: "height", korean: "키", audioKey: "vocab_height" },
+          { word: "language", korean: "언어", audioKey: "vocab_language" },
+          { word: "information", korean: "정보", audioKey: "vocab_information" }
+        ],
+        quizzes: [
+          {
+            type: "multiple_choice",
+            source: "textbook_q",
+            question: "After reading all the clues, who threw the cake at the Monalisa?",
+            audioKey: "quiz_3_1",
+            options: ["Andres Lozano", "Larry Johnson", "Tim Baker", "Luca Ferez"],
+            answer: 1,
+            explanation: "범인은 170cm보다 조금 큰 키(173cm), 긴 갈색 머리, 영어만 사용, 파란 눈을 모두 만족해요. 그 사람은 Larry Johnson이에요."
+          },
+          {
+            type: "multiple_choice",
+            source: "custom",
+            question: "Camila said the man spoke ONLY English. Which clue rules OUT Andres Lozano?",
+            audioKey: "quiz_3_2",
+            options: ["He speaks both Spanish and English.", "He is 176 cm tall.", "He has long hair.", "He bought a cake."],
+            answer: 0,
+            explanation: "범인은 영어만 말하는데, Andres Lozano는 스페인어와 영어를 모두 해요. 그래서 범인이 아니에요."
+          },
+          {
+            type: "true_false",
+            source: "custom",
+            question: "Tim Baker cannot be the criminal because he has green eyes.",
+            audioKey: "quiz_3_3",
+            answer: true,
+            explanation: "범인은 파란 눈을 가졌는데, Tim Baker는 초록색 눈이에요. 그래서 범인이 될 수 없어요."
+          },
+          {
+            type: "fill_blank",
+            source: "after_read",
+            question: "The criminal is a little taller than _____ cm. He speaks only _____. He has _____ eyes.",
+            audioKey: "quiz_3_4",
+            blanks: [
+              { position: 0, answer: "170", options: ["170", "160", "180", "190"] },
+              { position: 1, answer: "English", options: ["English", "Spanish", "French", "Korean"] },
+              { position: 2, answer: "blue", options: ["blue", "brown", "green", "gray"] }
+            ],
+            explanation: "세 가지 핵심 단서(170cm보다 조금 큰 키, 영어만 사용, 파란 눈)가 Larry Johnson을 가리켜요."
+          }
+        ]
+      }
+    ],
+
+    bonusQuizzes: [
+      { type: "multiple_choice", question: "This lesson asks you to think like the famous detective _____.", options: ["Sherlock Holmes", "Harry Potter", "James Bond", "Peter Pan"], answer: 0, explanation: "단원 제목 'Think like Sherlock Holmes!'에서 알 수 있어요." },
+      { type: "multiple_choice", question: "How many eyewitnesses were there in this case?", options: ["two", "three", "four", "five"], answer: 2, explanation: "본문에 'There were four eyewitnesses.'라고 나와 있어요. 네 명이에요." },
+      { type: "multiple_choice", question: "The criminal wore a wig and stood by a wheelchair to look like an _____ man.", options: ["old", "young", "rich", "famous"], answer: 0, explanation: "범인은 회색 가발을 쓰고 휠체어 앞에 서서 노인처럼 변장했어요." },
+      { type: "multiple_choice", question: "Which news headline best fits this case?", options: ["Famous Painter Botero Missing", "Man Steals Botero's Monalisa", "Man Damages Monalisa in Botero Museum", "Bakery Sells Out of Cakes"], answer: 2, explanation: "After You Read의 정답이에요. 누군가 케이크를 던져 그림을 훼손한(damage) 사건이에요." }
+    ]
   }
 ];
