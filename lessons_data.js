@@ -929,5 +929,192 @@ const STORY_LESSONS = [
       { type: "multiple_choice", question: "The criminal wore a wig and stood by a wheelchair to look like an _____ man.", options: ["old", "young", "rich", "famous"], answer: 0, explanation: "범인은 회색 가발을 쓰고 휠체어 앞에 서서 노인처럼 변장했어요." },
       { type: "multiple_choice", question: "Which news headline best fits this case?", options: ["Famous Painter Botero Missing", "Man Steals Botero's Monalisa", "Man Damages Monalisa in Botero Museum", "Bakery Sells Out of Cakes"], answer: 2, explanation: "After You Read의 정답이에요. 누군가 케이크를 던져 그림을 훼손한(damage) 사건이에요." }
     ]
+  },
+  {
+    id: 6,
+    title: "Join the Zero-Waste Challenge",
+    caseCount: 3,
+
+    passages: [
+      {
+        id: 1,
+        character: "Olivia",
+        characterDesc: "제로 웨이스트 챌린지의 시작 — 남은 음식을 되살린 Olivia",
+        page: 98,
+        text: "Every day, we produce lots of waste, and the Earth is getting sicker and sicker. Do you want to save the Earth? Then, join the zero-waste challenge, and share your stories.\nChallenge 01 - Reduce Food Waste\nOlivia: My birthday was last Saturday, and my family and I ate out. There were lots of leftovers, but we brought them home. The next day, I made a nice lunch out of them. FYI, you can find great cooking ideas for leftovers on the Internet.",
+        translation: "매일 우리는 많은 양의 쓰레기를 생산하고, 지구는 점점 더 병들고 있습니다. 지구를 구하고 싶나요? 그렇다면 제로 웨이스트 챌린지에 동참하고 당신의 이야기를 공유해 주세요.\n챌린지 1 음식물 쓰레기를 줄여라\nOlivia: 내 생일은 지난주 토요일이었고, 우리 가족과 나는 외식을 했어. 남은 음식이 많았지만, 우리는 그것들을 집으로 가져왔어. 그다음 날 나는 그것들로 맛있는 점심을 만들었어. 참고로, 남은 음식을 활용하는 멋진 요리 아이디어는 인터넷에서 찾을 수 있어.",
+        audioKey: "para_1",
+        vocabulary: [
+          { word: "zero", korean: "무, 없음", audioKey: "vocab_zero" },
+          { word: "challenge", korean: "도전", audioKey: "vocab_challenge" },
+          { word: "produce", korean: "생산하다", audioKey: "vocab_produce" },
+          { word: "reduce", korean: "줄이다", audioKey: "vocab_reduce" },
+          { word: "eat out", korean: "외식하다", audioKey: "vocab_eat_out" },
+          { word: "leftover", korean: "남은 음식", audioKey: "vocab_leftover" },
+          { word: "FYI", korean: "참고로 (for your information)", audioKey: "vocab_fyi" }
+        ],
+        quizzes: [
+          {
+            type: "multiple_choice",
+            source: "textbook_q",
+            question: "What did Olivia do with the leftovers the next day?",
+            audioKey: "quiz_1_1",
+            options: ["She threw them away.", "She gave them to her dog.", "She made a nice lunch out of them.", "She took them back to the restaurant."],
+            answer: 2,
+            explanation: "본문에 'The next day, I made a nice lunch out of them.'이라고 나와 있어요."
+          },
+          {
+            type: "multiple_choice",
+            source: "more_q",
+            question: "Why is the Earth getting sicker and sicker?",
+            audioKey: "quiz_1_2",
+            options: ["Because we produce lots of waste every day.", "Because we recycle too many bottles.", "Because people eat out every weekend.", "Because the Internet uses too much power."],
+            answer: 0,
+            explanation: "'Every day, we produce lots of waste, and the Earth is getting sicker and sicker.'에서 알 수 있어요."
+          },
+          {
+            type: "true_false",
+            source: "custom",
+            question: "You can find cooking ideas for leftovers on the Internet.",
+            audioKey: "quiz_1_3",
+            answer: true,
+            explanation: "'FYI, you can find great cooking ideas for leftovers on the Internet.'이라고 했어요. FYI는 '참고로'라는 뜻이에요."
+          },
+          {
+            type: "fill_blank",
+            source: "after_read",
+            question: "Olivia brought the _____ home and made a nice _____ out of them. Challenge 01 is about how to _____ food waste.",
+            audioKey: "quiz_1_4",
+            blanks: [
+              { position: 0, answer: "leftovers", options: ["leftovers", "bottles", "containers", "machines"] },
+              { position: 1, answer: "lunch", options: ["lunch", "cake", "bag", "poster"] },
+              { position: 2, answer: "reduce", options: ["reduce", "reuse", "recycle", "produce"] }
+            ],
+            explanation: "After You Read의 정답이에요. 'Bring leftovers home and reduce food waste.'"
+          }
+        ]
+      },
+      {
+        id: 2,
+        character: "Domingo & Emma",
+        characterDesc: "가방을 고쳐 쓴 Domingo와 일회용 플라스틱을 거부한 Emma",
+        page: 99,
+        text: "Challenge 02 - Reuse\nDomingo: My dog tore my bag. I wanted to buy a new one, but I thought again. I learned that reusing is important for zero-waste living. So, I decided to fix it and reuse it. I'm not very good at sewing, and I don't think that the bag looks perfect. I guess it's all right.\nChallenge 03 - Say No to Single-Use Plastic\nEmma: I often use food delivery services, but today I didn't. Instead, I walked to my favorite restaurant with a reusable container and picked up the food. I heard that plastic never goes away completely. I didn't use any single-use plastic today. I felt good!",
+        translation: "챌린지 2 재사용해라\nDomingo: 내 강아지가 내 가방을 찢어 버렸어. 나는 새것을 사고 싶었지만, 다시 생각해 봤어. 나는 재사용하는 것은 제로 웨이스트 생활에 중요하다고 배웠어. 그래서 나는 그것을 고쳐서 다시 사용하기로 결심했어. 나는 바느질을 잘하지 못해서, 가방이 완벽해 보인다고 생각하진 않아. 그래도 괜찮은 것 같아.\n챌린지 3 일회용 플라스틱 사용에 반대해라\nEmma: 나는 음식 배달 서비스를 자주 이용하는데, 오늘은 이용하지 않았어. 대신에, 재사용 가능한 용기를 가지고 내가 가장 좋아하는 식당으로 걸어가서 음식을 가져왔어. 나는 플라스틱은 절대로 완전히 없어지지 않는다고 들었어. 나는 오늘 어떠한 일회용 플라스틱도 사용하지 않았어. 기분이 좋았어!",
+        audioKey: "para_2",
+        vocabulary: [
+          { word: "reuse", korean: "재사용하다", audioKey: "vocab_reuse" },
+          { word: "tear", korean: "찢다 (-tore)", audioKey: "vocab_tear" },
+          { word: "sew", korean: "바느질하다 (-sewed)", audioKey: "vocab_sew" },
+          { word: "single-use", korean: "일회용의", audioKey: "vocab_single_use" },
+          { word: "delivery", korean: "배달", audioKey: "vocab_delivery" },
+          { word: "reusable", korean: "재사용할 수 있는", audioKey: "vocab_reusable" },
+          { word: "container", korean: "그릇, 용기", audioKey: "vocab_container" },
+          { word: "completely", korean: "완전히", audioKey: "vocab_completely" }
+        ],
+        quizzes: [
+          {
+            type: "multiple_choice",
+            source: "textbook_q",
+            question: "What did Domingo's dog tear?",
+            audioKey: "quiz_2_1",
+            options: ["It tore his T-shirt.", "It tore his shoes.", "It tore his book.", "It tore his bag."],
+            answer: 3,
+            explanation: "'My dog tore my bag.'이라고 했어요. T-shirt는 Before You Read의 예문이라 헷갈리기 쉬워요."
+          },
+          {
+            type: "multiple_choice",
+            source: "more_q",
+            question: "What did Domingo decide to do with his bag?",
+            audioKey: "quiz_2_2",
+            options: ["He decided to buy a new one.", "He decided to fix and reuse it.", "He decided to throw it away.", "He decided to give it to his dog."],
+            answer: 1,
+            explanation: "'So, I decided to fix it and reuse it.'이라고 했어요."
+          },
+          {
+            type: "true_false",
+            source: "custom",
+            question: "Emma used a food delivery service today.",
+            audioKey: "quiz_2_3",
+            answer: false,
+            explanation: "'I often use food delivery services, but today I didn't.'라고 했어요. 오늘은 이용하지 않았어요."
+          },
+          {
+            type: "fill_blank",
+            source: "after_read",
+            question: "Domingo decided to fix and _____ his bag. Emma walked to the restaurant with a reusable _____. She didn't use any single-use _____.",
+            audioKey: "quiz_2_4",
+            blanks: [
+              { position: 0, answer: "reuse", options: ["reuse", "reduce", "recycle", "return"] },
+              { position: 1, answer: "container", options: ["container", "machine", "delivery", "leftover"] },
+              { position: 2, answer: "plastic", options: ["plastic", "paper", "glass", "money"] }
+            ],
+            explanation: "After You Read의 정답이에요. 'Fix and reuse things. Don't use single-use plastic.'"
+          }
+        ]
+      },
+      {
+        id: 3,
+        character: "Minsu",
+        characterDesc: "재활용 기계에 병을 넣고 포인트를 받은 Minsu",
+        page: 100,
+        text: "Challenge 04 - Recycle\nMinsu: Yesterday, I took some plastic and glass bottles to a recycling machine near my house. I put them into the machine one by one, and I got some points in return. What can I do with those points? Well, I can use them like money. Don't you think that's cool?",
+        translation: "챌린지 4 재활용해라\n민수: 어제 나는 플라스틱병과 유리병 몇 개를 집 근처에 있는 재활용 기계로 가져갔어. 나는 그것들을 하나씩 기계에 집어넣었고, 대가로 포인트를 얻었어. 그 포인트로 뭘 할 수 있냐고? 음, 나는 포인트를 돈처럼 사용할 수 있어. 멋지다고 생각하지 않니?",
+        audioKey: "para_3",
+        vocabulary: [
+          { word: "machine", korean: "기계", audioKey: "vocab_machine" },
+          { word: "one by one", korean: "하나씩, 차례차례", audioKey: "vocab_one_by_one" },
+          { word: "in return", korean: "대가로, 답례로", audioKey: "vocab_in_return" },
+          { word: "cool", korean: "멋진", audioKey: "vocab_cool" }
+        ],
+        quizzes: [
+          {
+            type: "multiple_choice",
+            source: "textbook_q",
+            question: "What did Minsu get in return for the plastic and glass bottles?",
+            audioKey: "quiz_3_1",
+            options: ["He got some money.", "He got some points.", "He got a new bottle.", "He got a free lunch."],
+            answer: 1,
+            explanation: "'I got some points in return.'이라고 했어요. 돈이 아니라 포인트예요."
+          },
+          {
+            type: "multiple_choice",
+            source: "more_q",
+            question: "What can Minsu do with the points?",
+            audioKey: "quiz_3_2",
+            options: ["He can trade them for bottles.", "He can give them to the machine.", "He can save them for one year.", "He can use them like money."],
+            answer: 3,
+            explanation: "'Well, I can use them like money.'라고 했어요."
+          },
+          {
+            type: "true_false",
+            source: "custom",
+            question: "Minsu put all the bottles into the machine at the same time.",
+            audioKey: "quiz_3_3",
+            answer: false,
+            explanation: "'I put them into the machine one by one.'이라고 했어요. 하나씩 넣었어요."
+          },
+          {
+            type: "fill_blank",
+            source: "after_read",
+            question: "Minsu decided to _____ plastic and glass bottles. He put them into the machine one by _____, and he got some _____ in return.",
+            audioKey: "quiz_3_4",
+            blanks: [
+              { position: 0, answer: "recycle", options: ["recycle", "reduce", "reuse", "produce"] },
+              { position: 1, answer: "one", options: ["one", "two", "hand", "day"] },
+              { position: 2, answer: "points", options: ["points", "money", "bottles", "stories"] }
+            ],
+            explanation: "After You Read의 정답이에요. 'Recycle plastic and glass bottles.' 대가로 받은 것은 돈이 아니라 포인트예요."
+          }
+        ]
+      }
+    ],
+
+    bonusQuizzes: [
+      { type: "multiple_choice", question: "What did Emma take with her to her favorite restaurant?", options: ["A single-use plastic cup", "A paper bag", "A reusable container", "A shopping cart"], answer: 2, explanation: "'I walked to my favorite restaurant with a reusable container.'라고 했어요." },
+      { type: "multiple_choice", question: "What did Emma hear about plastic?", options: ["It is cheap to make.", "It is good for the Earth.", "It melts in hot water.", "It never goes away completely."], answer: 3, explanation: "'I heard that plastic never goes away completely.'라고 했어요." },
+      { type: "multiple_choice", question: "Which is NOT one of the four zero-waste challenges in this text?", options: ["Reduce food waste", "Buy new things often", "Reuse", "Recycle"], answer: 1, explanation: "네 가지 챌린지는 Reduce Food Waste, Reuse, Say No to Single-Use Plastic, Recycle이에요." },
+      { type: "multiple_choice", question: "Domingo said, \"I'm not very good at _____, and I don't think that the bag looks perfect.\"", options: ["sewing", "cooking", "running", "drawing"], answer: 0, explanation: "'I'm not very good at sewing.'라고 했어요. 바느질을 잘하지 못한다는 뜻이에요." }
+    ]
   }
 ];
