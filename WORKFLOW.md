@@ -9,7 +9,7 @@ Story Detective L1/L2 독립 앱을 하나의 통합 앱으로 병합. 레슨 �
 ```
 story-detective/
 ├── index.html              통합 게임 엔진 (L1 기반 + 레슨 선택 추가)
-├── lessons_data.js         STORY_LESSONS[] 배열 (L1~L6 데이터)
+├── lessons_data.js         STORY_LESSONS[] 배열 (L1~L7 데이터)
 ├── sfx_data.js             공유 효과음 (9개, L1에서 복사)
 ├── audio_L<N>.js           var AUDIO_L<N> = {...} (레슨별 TTS 번들, 각 9~14MB)
 ├── briefing_bg_L<N>.png    레슨별 브리핑 배경
@@ -29,6 +29,7 @@ story-detective/
 | 4 | The Colorful Villages of the World | p.68~70 |
 | 5 | Who Threw a Cake at the Monalisa? | p.82~84 |
 | 6 | Join the Zero-Waste Challenge | p.98~100 |
+| 7 | Let's Make a Movie! | p.114~116 |
 
 ## 통합 패턴
 

@@ -1116,5 +1116,199 @@ const STORY_LESSONS = [
       { type: "multiple_choice", question: "Which is NOT one of the four zero-waste challenges in this text?", options: ["Reduce food waste", "Buy new things often", "Reuse", "Recycle"], answer: 1, explanation: "네 가지 챌린지는 Reduce Food Waste, Reuse, Say No to Single-Use Plastic, Recycle이에요." },
       { type: "multiple_choice", question: "Domingo said, \"I'm not very good at _____, and I don't think that the bag looks perfect.\"", options: ["sewing", "cooking", "running", "drawing"], answer: 0, explanation: "'I'm not very good at sewing.'라고 했어요. 바느질을 잘하지 못한다는 뜻이에요." }
     ]
+  },
+  {
+    id: 7,
+    title: "Let's Make a Movie!",
+    caseCount: 3,
+
+    passages: [
+      {
+        id: 1,
+        character: "Jim Brown & Anna",
+        characterDesc: "영화 Happy Days의 감독 Jim Brown과 촬영 장소를 찾는 로케이션 매니저 Anna",
+        page: 114,
+        text: "Hi, I'm Jim Brown, the director of Happy Days. It's a movie about the friendship between Tom and his dog Max. A lot of people are working hard to create this movie. Do you want to meet some of them?\nI'm Anna, and I found this beautiful beach. I'm a location manager, and my job is to find perfect places for shooting. Of course, it is not easy, but I love my job. I like to travel and enjoy challenges.",
+        translation: "안녕, 나는 'Happy Days'의 감독 Jim Brown이야. 'Happy Days'는 Tom과 그의 개 Max의 우정에 관한 영화야. 많은 사람들이 이 영화를 만들기 위해 열심히 일하고 있어. 그들 중 몇 명을 만나 보고 싶니?\n나는 Anna이고, 내가 이 아름다운 해변을 찾아냈어. 나는 로케이션 매니저인데, 내 일은 촬영을 위한 완벽한 장소를 찾는 거야. 물론, 쉽지는 않지만, 나는 내 일을 정말 좋아해. 나는 여행하는 것을 좋아하고 도전을 즐겨.",
+        audioKey: "para_1",
+        vocabulary: [
+          { word: "director", korean: "감독", audioKey: "vocab_director" },
+          { word: "create", korean: "만들다, 창조하다", audioKey: "vocab_create" },
+          { word: "location", korean: "장소, 야외 촬영지", audioKey: "vocab_location" },
+          { word: "manager", korean: "관리자", audioKey: "vocab_manager" },
+          { word: "shoot", korean: "촬영하다", audioKey: "vocab_shoot" },
+          { word: "easy", korean: "쉬운", audioKey: "vocab_easy" },
+          { word: "challenge", korean: "도전", audioKey: "vocab_challenge" }
+        ],
+        quizzes: [
+          {
+            type: "multiple_choice",
+            source: "textbook_q",
+            question: "What does a location manager do?",
+            audioKey: "quiz_1_1",
+            options: ["A location manager trains animals for movies.", "A location manager finds perfect places for shooting.", "A location manager creates sound effects.", "A location manager changes the order of scenes."],
+            answer: 1,
+            explanation: "Anna가 'my job is to find perfect places for shooting'이라고 했어요. shoot은 여기서 '촬영하다'라는 뜻이에요."
+          },
+          {
+            type: "multiple_choice",
+            source: "more_q",
+            question: "Why does Anna love her job?",
+            audioKey: "quiz_1_2",
+            options: ["Because her job is very easy.", "Because she can meet famous actors.", "Because she likes to travel and enjoys challenges.", "Because she loves dogs."],
+            answer: 2,
+            explanation: "'I like to travel and enjoy challenges.'라고 했어요. 일이 쉽지 않다고 했으니 첫 번째 선택지는 틀려요."
+          },
+          {
+            type: "true_false",
+            source: "custom",
+            question: "Anna thinks that finding perfect places for shooting is easy.",
+            audioKey: "quiz_1_3",
+            answer: false,
+            explanation: "'Of course, it is not easy, but I love my job.'이라고 했어요. 쉽지 않지만 일을 정말 좋아해요."
+          },
+          {
+            type: "fill_blank",
+            source: "after_read",
+            question: "Jim Brown is the _____ of Happy Days. A location manager finds perfect _____ for shooting. Anna likes to _____ and enjoy challenges.",
+            audioKey: "quiz_1_4",
+            blanks: [
+              { position: 0, answer: "director", options: ["director", "manager", "editor", "actor"] },
+              { position: 1, answer: "places", options: ["places", "cameras", "sounds", "scenes"] },
+              { position: 2, answer: "travel", options: ["travel", "sing", "cook", "sew"] }
+            ],
+            explanation: "본문과 After You Read의 내용이에요. 'location manager: find perfect places for shooting.' Jim Brown은 감독(director)이고, Anna는 여행을 좋아해요."
+          }
+        ]
+      },
+      {
+        id: 2,
+        character: "Peter & Jennifer",
+        characterDesc: "드론으로 촬영하는 촬영 감독 Peter와 Max를 돌보는 동물 조련사 Jennifer",
+        page: 115,
+        text: "I'm Peter, the director of photography for this movie. I'm in charge of all the cameras. Today, Tom and Max are going to play together with a ball on the beach. To capture their happy moments, I'm going to use drones.\nI'm Jennifer. I trained and took care of Max for a long time. Max is a great actor, but he sometimes gets too excited when a lot of people are around. So, I use hand signals to calm him. Who am I? I'm an animal wrangler.",
+        translation: "나는 이 영화의 촬영 감독인 Peter야. 나는 모든 카메라를 담당하고 있지. 오늘, Tom과 Max는 해변에서 공을 가지고 함께 놀 예정이야. 그들의 행복한 순간을 포착하기 위해, 나는 드론을 사용할 거야.\n나는 Jennifer야. 나는 Max를 오랫동안 훈련하고 돌봤어. Max는 훌륭한 배우이지만, 주변에 사람들이 많으면 가끔 너무 흥분할 때가 있어. 그래서, 나는 그를 진정시키기 위해 수신호를 사용해. 나는 누구일까? 나는 동물 조련사야.",
+        audioKey: "para_2",
+        vocabulary: [
+          { word: "photography", korean: "사진[촬영]술", audioKey: "vocab_photography" },
+          { word: "be in charge of", korean: "~을 담당하다", audioKey: "vocab_be_in_charge_of" },
+          { word: "capture", korean: "포착하다", audioKey: "vocab_capture" },
+          { word: "moment", korean: "순간", audioKey: "vocab_moment" },
+          { word: "train", korean: "훈련시키다", audioKey: "vocab_train" },
+          { word: "take care of", korean: "~을 돌보다", audioKey: "vocab_take_care_of" },
+          { word: "signal", korean: "신호", audioKey: "vocab_signal" },
+          { word: "calm", korean: "진정시키다", audioKey: "vocab_calm" },
+          { word: "wrangler", korean: "조련사", audioKey: "vocab_wrangler" }
+        ],
+        quizzes: [
+          {
+            type: "multiple_choice",
+            source: "textbook_q",
+            question: "What is Peter in charge of?",
+            audioKey: "quiz_2_1",
+            options: ["He's in charge of all the actors.", "He's in charge of the animals.", "He's in charge of all the cameras.", "He's in charge of the sound effects."],
+            answer: 2,
+            explanation: "'I'm in charge of all the cameras.'라고 했어요. be in charge of는 '~을 담당하다'라는 뜻이에요."
+          },
+          {
+            type: "multiple_choice",
+            source: "more_q",
+            question: "What does Jennifer do when Max gets too excited?",
+            audioKey: "quiz_2_2",
+            options: ["She gives him some food.", "She takes him home.", "She plays with him with a ball.", "She uses hand signals to calm him."],
+            answer: 3,
+            explanation: "'So, I use hand signals to calm him.'이라고 했어요. 수신호로 Max를 진정시켜요."
+          },
+          {
+            type: "true_false",
+            source: "custom",
+            question: "Max sometimes gets too excited when a lot of people are around.",
+            audioKey: "quiz_2_3",
+            answer: true,
+            explanation: "'he sometimes gets too excited when a lot of people are around'라고 했어요. 주변에 사람이 많으면 너무 흥분해요."
+          },
+          {
+            type: "fill_blank",
+            source: "after_read",
+            question: "Peter is in charge of all the _____. To capture Tom and Max's happy moments, he is going to use _____. Jennifer is an animal wrangler, and she _____ and takes care of animals for movies.",
+            audioKey: "quiz_2_4",
+            blanks: [
+              { position: 0, answer: "cameras", options: ["cameras", "actors", "scenes", "signals"] },
+              { position: 1, answer: "drones", options: ["drones", "balls", "waves", "containers"] },
+              { position: 2, answer: "trains", options: ["trains", "deletes", "records", "shoots"] }
+            ],
+            explanation: "본문과 After You Read의 내용이에요. 'director of photography: be in charge of all the cameras', 'animal wrangler: train and take care of animals.' Peter는 드론(drones)으로 촬영해요."
+          }
+        ]
+      },
+      {
+        id: 3,
+        character: "Emma & Chris",
+        characterDesc: "장면을 편집하는 영화 편집자 Emma와 음향 효과를 만드는 폴리 아티스트 Chris",
+        page: 116,
+        text: "My name is Emma, and I'm a film editor. My work begins after the shooting is over. To create a better story, I can change the order of scenes or delete some of them. Storytelling skills are important for my job, so I read a lot.\nI'm Chris, and I'm a Foley artist. I create sound effects in my studio when recording on location is not easy. Listen carefully. Do you hear the sound of waves? I made that sound with rice and a plastic container. Doesn't it sound real?",
+        translation: "내 이름은 Emma이고, 나는 영화 편집자야. 내 일은 촬영이 끝난 뒤에 시작돼. 더 좋은 이야기를 만들기 위해서, 나는 장면의 순서를 바꾸거나 장면 중 일부를 삭제할 수도 있어. 내 일을 하는 데는 스토리텔링 능력이 중요해서, 나는 책을 많이 읽어.\n나는 Chris이고, 폴리 아티스트야. 나는 현장에서 녹음하는 게 쉽지 않을 때 내 작업실에서 음향 효과를 만들어. 잘 들어 봐. 파도 소리가 들리니? 내가 쌀과 플라스틱 통으로 그 소리를 만들었어. 진짜 같지 않니?",
+        audioKey: "para_3",
+        vocabulary: [
+          { word: "editor", korean: "편집자", audioKey: "vocab_editor" },
+          { word: "be over", korean: "끝나다", audioKey: "vocab_be_over" },
+          { word: "scene", korean: "장면", audioKey: "vocab_scene" },
+          { word: "delete", korean: "지우다, 삭제하다", audioKey: "vocab_delete" },
+          { word: "storytelling", korean: "스토리텔링, 이야기하기", audioKey: "vocab_storytelling" },
+          { word: "skill", korean: "기술, 스킬", audioKey: "vocab_skill" },
+          { word: "effect", korean: "효과", audioKey: "vocab_effect" },
+          { word: "record", korean: "녹음하다, 녹화하다", audioKey: "vocab_record" },
+          { word: "wave", korean: "파도", audioKey: "vocab_wave" },
+          { word: "rice", korean: "쌀", audioKey: "vocab_rice" }
+        ],
+        quizzes: [
+          {
+            type: "multiple_choice",
+            source: "textbook_q",
+            question: "What can a film editor do to create a better story?",
+            audioKey: "quiz_3_1",
+            options: ["A film editor can find perfect places for shooting.", "A film editor can change the order of scenes or delete some of them.", "A film editor can train animals for movies.", "A film editor can use drones to capture happy moments."],
+            answer: 1,
+            explanation: "'To create a better story, I can change the order of scenes or delete some of them.'이라고 했어요."
+          },
+          {
+            type: "multiple_choice",
+            source: "more_q",
+            question: "When does Emma's work begin?",
+            audioKey: "quiz_3_2",
+            options: ["It begins before the shooting starts.", "It begins when the actors arrive.", "It begins when Max gets excited.", "It begins after the shooting is over."],
+            answer: 3,
+            explanation: "'My work begins after the shooting is over.'라고 했어요. be over는 '끝나다'라는 뜻이에요."
+          },
+          {
+            type: "true_false",
+            source: "custom",
+            question: "Chris made the sound of waves with flour and a plastic container.",
+            audioKey: "quiz_3_3",
+            answer: false,
+            explanation: "'I made that sound with rice and a plastic container.'라고 했어요. 밀가루(flour)가 아니라 쌀(rice)이에요."
+          },
+          {
+            type: "fill_blank",
+            source: "after_read",
+            question: "Emma can _____ the order of scenes or _____ some of them. Chris is a Foley artist, and he creates _____ effects for movies.",
+            audioKey: "quiz_3_4",
+            blanks: [
+              { position: 0, answer: "change", options: ["change", "capture", "record", "train"] },
+              { position: 1, answer: "delete", options: ["delete", "sing", "cook", "sew"] },
+              { position: 2, answer: "sound", options: ["sound", "camera", "smell", "drone"] }
+            ],
+            explanation: "After You Read의 정답이에요. 'film editor: change the order of scenes or delete some of them', 'Foley artist: create sound effects for movies.'"
+          }
+        ]
+      }
+    ],
+
+    bonusQuizzes: [
+      { type: "multiple_choice", question: "What is the movie Happy Days about?", options: ["It's about a trip to a beautiful beach.", "It's about the friendship between Tom and his dog Max.", "It's about a famous movie director.", "It's about a dog that wins a prize."], answer: 1, explanation: "'It's a movie about the friendship between Tom and his dog Max.'라고 했어요." },
+      { type: "multiple_choice", question: "What are Tom and Max going to do on the beach?", options: ["They are going to swim in the sea.", "They are going to watch the waves.", "They are going to play together with a ball.", "They are going to fly drones."], answer: 2, explanation: "'Today, Tom and Max are going to play together with a ball on the beach.'라고 했어요. 드론은 Peter가 촬영할 때 써요." },
+      { type: "multiple_choice", question: "What did Chris use to make the sound of waves?", options: ["He used rice and a plastic container.", "He used water and a glass bottle.", "He used sand and a paper bag.", "He used flour and a plastic bag."], answer: 0, explanation: "'I made that sound with rice and a plastic container.'라고 했어요." },
+      { type: "multiple_choice", question: "Emma said, \"Storytelling skills are important for my job, so I _____ a lot.\"", options: ["write", "read", "travel", "record"], answer: 1, explanation: "'Storytelling skills are important for my job, so I read a lot.'이라고 했어요. 많이 쓰는(write) 것이 아니라 많이 읽어요(read)." }
+    ]
   }
 ];
